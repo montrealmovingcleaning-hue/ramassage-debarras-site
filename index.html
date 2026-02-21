@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-
   <title>Ramassage Débarras Déchets | Débarras pas cher & Junk Removal Montréal</title>
-  <meta name="description" content="Ramassage Débarras Déchets à Montréal. Débarras pas cher + junk removal Montréal: meubles, électros, débris. Service rapide, fiable, abordable. Soumission gratuite 514-446-4684." />
+  <meta name="description" content="Ramassage Débarras Déchets à Montréal. Débarras pas cher + junk removal Montréal: meubles, électros, débris. Rapide, fiable, abordable. Soumission gratuite 514-446-4684." />
   <meta name="theme-color" content="#166534" />
 
   <style>
@@ -13,14 +12,12 @@
       --g:#166534; --g2:#0f5b2a;
       --r:#b91c1c; --r2:#ef4444;
       --ink:#0b1220; --mut:#475569;
-      --bg:#eef2f3;
-      --card:#ffffff;
+      --bg:#eef2f3; --card:#fff;
       --line:rgba(15,23,42,.12);
       --shadow:0 18px 55px rgba(0,0,0,.12);
       --shadow2:0 12px 28px rgba(0,0,0,.10);
-      --radius:18px;
+      --rad:18px;
     }
-
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
@@ -50,8 +47,7 @@
       width:40px;height:40px;border-radius:14px;
       background:rgba(255,255,255,.14);
       border:1px solid rgba(255,255,255,.22);
-      display:grid;place-items:center;
-      font-weight:1000;
+      display:grid;place-items:center;font-weight:1000;
     }
     .brand strong{display:block;font-weight:1000;letter-spacing:-.2px}
     .brand small{display:block;opacity:.92;font-weight:800;font-size:12px;margin-top:2px}
@@ -66,7 +62,7 @@
     }
     @media(max-width:860px){.links{display:none}}
 
-    /* HERO */
+    /* HERO FLOW (text + image) */
     .hero{
       margin-top:16px;
       border-radius:24px;
@@ -75,39 +71,68 @@
       border:1px solid var(--line);
       box-shadow:var(--shadow);
     }
-    .heroTop{
-      padding:18px 18px 0;
-      text-align:center;
+    .heroGrid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:0;
+      align-items:stretch;
     }
+    @media(max-width:980px){.heroGrid{grid-template-columns:1fr}}
+    .heroLeft{padding:20px}
     .pill{
       display:inline-flex;gap:8px;align-items:center;
       padding:8px 12px;border-radius:999px;
       background:rgba(22,101,52,.10);
       border:1px solid rgba(22,101,52,.18);
       color:#14532d;
-      font-weight:1000;
-      font-size:13px;
+      font-weight:1000;font-size:13px;
     }
     h1{
-      margin:10px 0 8px;
-      font-size:34px;
+      margin:12px 0 10px;
+      font-size:36px;
       line-height:1.08;
-      letter-spacing:-.6px;
+      letter-spacing:-.7px;
     }
-    .sub{
-      margin:0;
-      color:var(--mut);
-      font-weight:800;
+    @media(max-width:520px){h1{font-size:32px}}
+    .sub{margin:0;color:var(--mut);font-weight:850;line-height:1.55}
+    .trustRow{
+      display:flex;flex-wrap:wrap;gap:10px;
+      margin-top:14px;
     }
+    .trust{
+      background:linear-gradient(180deg,#fff,#f8fafc);
+      border:1px solid rgba(15,23,42,.10);
+      border-radius:16px;
+      padding:10px 12px;
+      font-weight:950;
+      color:#0b1220;
+      box-shadow:0 10px 24px rgba(0,0,0,.06);
+      font-size:13px;
+    }
+    .heroCtas{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .cta{
+      flex:1;min-width:190px;
+      padding:14px 14px;border-radius:14px;
+      font-weight:1000;text-align:center;
+      border:1px solid rgba(15,23,42,.10);
+      color:#fff;
+      box-shadow:0 10px 25px rgba(0,0,0,.12);
+    }
+    .cta.red{background:linear-gradient(180deg,var(--r2),var(--r))}
+    .cta.green{background:linear-gradient(180deg,#2ea44f,#166534)}
+    .note{margin-top:10px;color:#64748b;font-weight:850;font-size:12px}
 
+    .heroRight{
+      padding:18px;
+      background:linear-gradient(180deg, rgba(22,101,52,.06), rgba(0,0,0,0));
+    }
     .banner{
-      margin:14px 18px 0;
       border-radius:18px;
       border:1px solid rgba(15,23,42,.10);
       overflow:hidden;
-      position:relative;
-      background:#fff;
       box-shadow: var(--shadow2);
+      background:#fff;
+      position:relative;
     }
     .banner:before{
       content:"";
@@ -117,32 +142,8 @@
     }
     .banner img{width:100%;display:block;position:relative}
 
-    .heroCtas{
-      display:flex;gap:12px;flex-wrap:wrap;
-      padding:14px 18px 18px;
-      justify-content:center;
-    }
-    .cta{
-      flex:1;min-width:190px;max-width:360px;
-      padding:14px 14px;border-radius:14px;
-      font-weight:1000;text-align:center;
-      border:1px solid rgba(15,23,42,.10);
-      color:#fff;
-      box-shadow:0 10px 25px rgba(0,0,0,.12);
-    }
-    .cta.red{background:linear-gradient(180deg,var(--r2),var(--r))}
-    .cta.green{background:linear-gradient(180deg,#2ea44f,#166534)}
-
-    /* MAIN GRID */
-    .grid{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns: 1.35fr .65fr;
-      gap:14px;
-      align-items:start;
-    }
-    @media(max-width:980px){.grid{grid-template-columns:1fr}}
-
+    /* SECTIONS */
+    .section{margin-top:16px}
     .card{
       background:var(--card);
       border:1px solid var(--line);
@@ -154,7 +155,7 @@
     h2{margin:0 0 8px;font-size:22px;letter-spacing:-.3px}
     .p{margin:0;color:var(--mut);font-weight:750;line-height:1.55}
 
-    /* Service photo tiles */
+    /* SERVICES (3 photo cards) */
     .serviceGrid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -169,38 +170,54 @@
       background:#fff;
       box-shadow:0 10px 24px rgba(0,0,0,.08);
     }
-    .svc img{
-      width:100%;
-      height:150px;
-      object-fit:cover;
-      display:block;
-    }
-    .svc .cap{
-      padding:12px 14px;
-      background:linear-gradient(180deg,#ffffff,#f3f4f6);
-    }
+    .svc img{width:100%;height:170px;object-fit:cover;display:block}
+    .svc .cap{padding:12px 14px;background:linear-gradient(180deg,#fff,#f3f4f6)}
     .svc b{display:block;font-weight:1000}
     .svc small{display:block;color:var(--mut);font-weight:850;margin-top:3px}
 
-    /* Why choose */
-    .why{
-      margin-top:14px;
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:12px;
+    /* HOW IT WORKS */
+    .steps{
+      display:grid;grid-template-columns:repeat(3,1fr);
+      gap:12px;margin-top:14px;
     }
-    @media(max-width:860px){.why{grid-template-columns:1fr}}
-    .why .w{
+    @media(max-width:860px){.steps{grid-template-columns:1fr}}
+    .step{
       border-radius:18px;
       border:1px solid rgba(15,23,42,.10);
       background:linear-gradient(180deg,#fff,#f8fafc);
       padding:14px;
-      text-align:center;
     }
-    .w b{display:block;font-weight:1000}
-    .w span{display:block;color:var(--mut);font-weight:850;margin-top:4px;font-size:13px}
+    .step b{display:block;font-weight:1000}
+    .step span{display:block;color:var(--mut);font-weight:850;margin-top:4px;font-size:13px}
+    .num{
+      width:34px;height:34px;border-radius:12px;
+      background:rgba(22,101,52,.12);
+      border:1px solid rgba(22,101,52,.18);
+      display:grid;place-items:center;
+      font-weight:1000;color:#14532d;
+      margin-bottom:10px;
+    }
 
-    /* Form */
+    /* AREAS */
+    .areas{
+      display:flex;flex-wrap:wrap;gap:10px;margin-top:12px
+    }
+    .chip{
+      padding:10px 12px;border-radius:999px;
+      border:1px solid rgba(15,23,42,.10);
+      background:#fff;
+      font-weight:900;color:#0b1220;
+      box-shadow:0 10px 24px rgba(0,0,0,.06);
+      font-size:13px;
+    }
+
+    /* CONTACT (single column, calmer) */
+    .contactGrid{
+      display:grid;grid-template-columns:1fr 1fr;gap:14px;
+      align-items:start;margin-top:14px;
+    }
+    @media(max-width:980px){.contactGrid{grid-template-columns:1fr}}
+
     .formHead{
       background:linear-gradient(180deg,var(--g),var(--g2));
       color:#fff;
@@ -237,7 +254,6 @@
       cursor:pointer;
       box-shadow:0 12px 28px rgba(185,28,28,.22);
     }
-    .note{margin-top:10px;color:#64748b;font-weight:850;font-size:12px;line-height:1.45}
 
     /* Footer CTA */
     .footerBar{
@@ -259,13 +275,10 @@
       font-size:13px;
     }
 
-    /* Sticky mobile bar (huge for leads) */
+    /* Sticky mobile CTA */
     .sticky{
-      position:fixed;
-      left:12px; right:12px; bottom:12px;
-      display:none;
-      gap:10px;
-      z-index:80;
+      position:fixed;left:12px;right:12px;bottom:12px;
+      display:none;gap:10px;z-index:80;
     }
     .sticky a{
       flex:1;
@@ -279,9 +292,7 @@
     }
     .sticky .call{background:linear-gradient(180deg,var(--r2),var(--r))}
     .sticky .quote{background:linear-gradient(180deg,#2ea44f,#166534)}
-    @media(max-width:860px){
-      .sticky{display:flex}
-    }
+    @media(max-width:860px){.sticky{display:flex}}
   </style>
 </head>
 
@@ -297,8 +308,8 @@
       </div>
 
       <div class="links">
-        <a href="#accueil">Accueil</a>
         <a href="#services">Nos Services</a>
+        <a href="#process">Comment ça marche</a>
         <a href="#contact">Contact</a>
       </div>
 
@@ -306,95 +317,161 @@
     </div>
   </div>
 
-  <div class="wrap" id="accueil">
+  <div class="wrap">
+    <!-- HERO -->
     <div class="hero">
-      <div class="heroTop">
-        <span class="pill">Débarras pas cher • Rapide • Fiable</span>
-        <h1>Ramassage Débarras Déchets & Junk Removal Montréal</h1>
-        <p class="sub">Meubles • Électros • Débris • Waste pickup — Montréal & alentours</p>
-      </div>
-
-      <div class="banner">
-        <!-- your hero poster -->
-        <img src="file_0000000059ec71f59d678cb7c92e591d%20(1).png" alt="Ramassage Débarras Déchets" />
-      </div>
-
-      <div class="heroCtas">
-        <a class="cta red" href="tel:15144464684">📞 APPELEZ-NOUS MAINTENANT</a>
-        <a class="cta green" href="#contact">📝 SOUMISSION GRATUITE</a>
-      </div>
-    </div>
-
-    <div class="grid">
-      <!-- LEFT -->
-      <div class="card" id="services">
-        <div class="pad">
-          <h2>Services de débarras abordable</h2>
-          <p class="p">
-            Service professionnel à Montréal. <strong>Débarras pas cher</strong> + <strong>junk removal Montréal</strong>
-            (furniture removal, appliance removal, debris removal, cleanouts).
+      <div class="heroGrid">
+        <div class="heroLeft">
+          <span class="pill">Débarras pas cher • Rapide • Fiable</span>
+          <h1>Junk Removal Montréal & Débarras pas cher</h1>
+          <p class="sub">
+            Ramassage Débarras Déchets — meubles, électros, débris.
+            Service rapide, propre et abordable à Montréal & alentours.
           </p>
 
-          <div class="serviceGrid">
-            <div class="svc">
-              <img src="meubles.png" alt="Meubles - Furniture removal Montréal">
-              <div class="cap">
-                <b>Meubles</b>
-                <small>Furniture removal • Canapés, matelas, armoires</small>
-              </div>
-            </div>
-
-            <div class="svc">
-              <img src="electros.png" alt="Électros - Appliance removal Montréal">
-              <div class="cap">
-                <b>Électros</b>
-                <small>Appliance removal • Frigos, laveuses, sécheuses</small>
-              </div>
-            </div>
-
-            <div class="svc">
-              <img src="debris.png" alt="Construction / Débris - Debris removal Montréal">
-              <div class="cap">
-                <b>Construction / Débris</b>
-                <small>Debris removal • Rénovation, bois, gypse</small>
-              </div>
-            </div>
+          <div class="trustRow">
+            <div class="trust">✅ Même jour / lendemain</div>
+            <div class="trust">✅ Résidentiel & commercial</div>
+            <div class="trust">♻️ Recyclage quand possible</div>
           </div>
 
-          <div class="why">
-            <div class="w"><b>⚡ Rapide</b><span>Souvent le jour même</span></div>
-            <div class="w"><b>🛡️ Fiable</b><span>Service propre & sérieux</span></div>
-            <div class="w"><b>💰 Abordable</b><span>Tarifs compétitifs</span></div>
+          <div class="heroCtas">
+            <a class="cta red" href="tel:15144464684">📞 Appeler maintenant</a>
+            <a class="cta green" href="#contact">📝 Soumission gratuite</a>
           </div>
+
+          <div class="note">Astuce: adresse + photos = prix plus précis.</div>
         </div>
-      </div>
 
-      <!-- RIGHT FORM -->
-      <div class="card" id="contact">
-        <div class="formHead">Demande de soumission gratuite</div>
-        <div class="pad">
-          <form name="soumission" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="soumission" />
-
-            <label>Nom</label>
-            <input name="name" required>
-
-            <label>Adresse / secteur</label>
-            <input name="address" required>
-
-            <label>Téléphone</label>
-            <input name="phone" required>
-
-            <label>Détails</label>
-            <textarea name="message" placeholder="Décrivez les items + étage + accès..." required></textarea>
-
-            <button class="send" type="submit">ENVOYER</button>
-            <div class="note">Astuce: ajoutez 1–2 photos + adresse pour un prix plus précis.</div>
-          </form>
+        <div class="heroRight">
+          <div class="banner">
+            <img src="file_0000000059ec71f59d678cb7c92e591d%20(1).png" alt="Ramassage Débarras Déchets" />
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- SERVICES -->
+    <div class="section card" id="services">
+      <div class="pad">
+        <h2>Nos services</h2>
+        <p class="p">
+          Débarras pas cher + junk removal Montréal (furniture removal, appliance removal, debris removal, cleanouts).
+        </p>
+
+        <div class="serviceGrid">
+          <div class="svc">
+            <img src="meubles.png" alt="Meubles - Furniture removal Montréal">
+            <div class="cap">
+              <b>Meubles</b>
+              <small>Furniture removal • Canapés, matelas, armoires</small>
+            </div>
+          </div>
+
+          <div class="svc">
+            <img src="electros.png" alt="Électros - Appliance removal Montréal">
+            <div class="cap">
+              <b>Électros</b>
+              <small>Appliance removal • Frigos, laveuses, sécheuses</small>
+            </div>
+          </div>
+
+          <div class="svc">
+            <img src="debris.png" alt="Débris - Debris removal Montréal">
+            <div class="cap">
+              <b>Construction / Débris</b>
+              <small>Debris removal • Rénovation, bois, gypse</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="section card" id="process">
+      <div class="pad">
+        <h2>Comment ça marche</h2>
+        <p class="p">Simple, rapide, propre.</p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="num">1</div>
+            <b>Soumission</b>
+            <span>Adresse + items + photos (si possible).</span>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <b>Prix clair</b>
+            <span>On confirme le prix selon volume & accès.</span>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <b>Ramassage</b>
+            <span>On charge tout et on laisse propre.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AREAS -->
+    <div class="section card">
+      <div class="pad">
+        <h2>Zones desservies</h2>
+        <p class="p">Montréal et environs.</p>
+
+        <div class="areas">
+          <div class="chip">Montréal</div>
+          <div class="chip">Laval</div>
+          <div class="chip">Rive-Sud</div>
+          <div class="chip">Rive-Nord</div>
+          <div class="chip">West Island</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section card" id="contact">
+      <div class="formHead">Demande de soumission gratuite</div>
+      <div class="pad">
+        <div class="contactGrid">
+          <div>
+            <h2 style="margin:0 0 8px">Besoin d’un prix rapide?</h2>
+            <p class="p">
+              Indiquez l’adresse, la liste des items, l’étage et l’accès (escaliers/ascenseur).
+              <br><br>
+              <b>SEO:</b> Junk removal Montréal • Débarras pas cher • Furniture removal • Debris removal
+            </p>
+            <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+              <a class="cta red" style="max-width:none" href="tel:15144464684">📞 514 446-4684</a>
+              <a class="cta green" style="max-width:none" href="#contact">📝 Remplir le formulaire</a>
+            </div>
+          </div>
+
+          <div>
+            <form name="soumission" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="soumission" />
+
+              <label>Nom</label>
+              <input name="name" required>
+
+              <label>Adresse / secteur</label>
+              <input name="address" required>
+
+              <label>Téléphone</label>
+              <input name="phone" required>
+
+              <label>Détails</label>
+              <textarea name="message" placeholder="Décrivez les items + étage + accès..." required></textarea>
+
+              <button class="send" type="submit">ENVOYER</button>
+              <div class="note">En envoyant, vous acceptez d’être contacté pour votre soumission.</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER CTA -->
     <div class="footerBar">
       ENLÈVEMENT RAPIDE ET PAS CHER — Junk Removal Montréal
       <br>
@@ -406,7 +483,6 @@
     </div>
   </div>
 
-  <!-- Sticky mobile CTA -->
   <div class="sticky">
     <a class="call" href="tel:15144464684">📞 Appeler</a>
     <a class="quote" href="#contact">📝 Soumission</a>
@@ -414,4 +490,4 @@
 
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
-</html>l 
+</html>
