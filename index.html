@@ -1,493 +1,607 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Ramassage Débarras Déchets | Débarras pas cher & Junk Removal Montréal</title>
-  <meta name="description" content="Ramassage Débarras Déchets à Montréal. Débarras pas cher + junk removal Montréal: meubles, électros, débris. Rapide, fiable, abordable. Soumission gratuite 514-446-4684." />
-  <meta name="theme-color" content="#166534" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Ramassage débarras dechets | Débarras pas cher Montréal • 514-446-4684</title>
+  <meta name="description" content="Ramassage débarras dechets à Montréal et alentours. Meubles, électros, débris, encombrants, caves/garages. Service rapide, prix honnête. Soumission gratuite : 514-446-4684." />
+
+  <meta property="og:title" content="Ramassage débarras dechets | Débarras pas cher Montréal" />
+  <meta property="og:description" content="Rapide, fiable, abordable. Soumission gratuite au 514-446-4684." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b1220" />
 
   <style>
     :root{
-      --g:#166534; --g2:#0f5b2a;
-      --r:#b91c1c; --r2:#ef4444;
-      --ink:#0b1220; --mut:#475569;
-      --bg:#eef2f3; --card:#fff;
-      --line:rgba(15,23,42,.12);
-      --shadow:0 18px 55px rgba(0,0,0,.12);
-      --shadow2:0 12px 28px rgba(0,0,0,.10);
-      --rad:18px;
+      --bg:#0b1220; --panel:#0f1a33; --text:#e9eefc; --muted:#b8c2e0;
+      --brand:#22c55e; --brand2:#16a34a; --line:rgba(255,255,255,.12);
+      --shadow: 0 18px 45px rgba(0,0,0,.35); --radius: 18px; --max: 1100px;
     }
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--ink);
-      background:
-        radial-gradient(900px 500px at 15% -10%, rgba(22,101,52,.16), transparent 60%),
-        radial-gradient(900px 500px at 105% 10%, rgba(239,68,68,.10), transparent 62%),
-        linear-gradient(180deg,#f6f8f9, var(--bg));
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      background:radial-gradient(1200px 600px at 20% 0%, #172554 0%, rgba(23,37,84,0) 60%),
+                 radial-gradient(900px 500px at 90% 10%, rgba(34,197,94,.22) 0%, rgba(34,197,94,0) 55%),
+                 var(--bg);
+      color:var(--text)
     }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1120px;margin:0 auto;padding:18px}
-
-    /* NAV */
-    .nav{
-      position:sticky;top:0;z-index:50;
-      background:linear-gradient(180deg, rgba(22,101,52,.96), rgba(15,91,42,.92));
-      color:#fff;
-      border-bottom:1px solid rgba(255,255,255,.18);
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+    .topbar{
+      position:sticky;top:0;z-index:30;
       backdrop-filter: blur(10px);
-      box-shadow:0 12px 35px rgba(0,0,0,.12);
+      background: rgba(11,18,32,.65);
+      border-bottom:1px solid var(--line);
     }
-    .navin{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;gap:10px;align-items:center}
-    .badge{
-      width:40px;height:40px;border-radius:14px;
-      background:rgba(255,255,255,.14);
-      border:1px solid rgba(255,255,255,.22);
-      display:grid;place-items:center;font-weight:1000;
+    .row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900}
+    .logo{
+      width:40px;height:40px;border-radius:12px;
+      background: linear-gradient(135deg, var(--brand), #60a5fa);
+      box-shadow: 0 10px 25px rgba(34,197,94,.25);
+      display:grid;place-items:center;color:#071016;font-weight:900;
     }
-    .brand strong{display:block;font-weight:1000;letter-spacing:-.2px}
-    .brand small{display:block;opacity:.92;font-weight:800;font-size:12px;margin-top:2px}
-    .links{display:flex;gap:18px;align-items:center;font-weight:900}
-    .links a{opacity:.95}
-    .phone{
-      background:linear-gradient(180deg,var(--r2),var(--r));
-      padding:10px 14px;border-radius:12px;
-      border:1px solid rgba(255,255,255,.22);
-      font-weight:1000;white-space:nowrap;
-      box-shadow:0 10px 25px rgba(0,0,0,.18);
-    }
-    @media(max-width:860px){.links{display:none}}
-
-    /* HERO FLOW (text + image) */
-    .hero{
-      margin-top:16px;
-      border-radius:24px;
-      overflow:hidden;
-      background:var(--card);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-    }
-    .heroGrid{
-      display:grid;
-      grid-template-columns:1.05fr .95fr;
-      gap:0;
-      align-items:stretch;
-    }
-    @media(max-width:980px){.heroGrid{grid-template-columns:1fr}}
-    .heroLeft{padding:20px}
+    .small{font-size:13px;color:var(--muted)}
+    .nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
     .pill{
-      display:inline-flex;gap:8px;align-items:center;
-      padding:8px 12px;border-radius:999px;
-      background:rgba(22,101,52,.10);
-      border:1px solid rgba(22,101,52,.18);
-      color:#14532d;
-      font-weight:1000;font-size:13px;
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 14px;border:1px solid var(--line);
+      border-radius:999px;background:rgba(255,255,255,.06);
+      text-decoration:none;transition:.2s transform,.2s background;white-space:nowrap;
+      font-weight:800;
     }
-    h1{
-      margin:12px 0 10px;
-      font-size:36px;
-      line-height:1.08;
-      letter-spacing:-.7px;
-    }
-    @media(max-width:520px){h1{font-size:32px}}
-    .sub{margin:0;color:var(--mut);font-weight:850;line-height:1.55}
-    .trustRow{
-      display:flex;flex-wrap:wrap;gap:10px;
-      margin-top:14px;
-    }
-    .trust{
-      background:linear-gradient(180deg,#fff,#f8fafc);
-      border:1px solid rgba(15,23,42,.10);
-      border-radius:16px;
-      padding:10px 12px;
-      font-weight:950;
-      color:#0b1220;
-      box-shadow:0 10px 24px rgba(0,0,0,.06);
-      font-size:13px;
-    }
-    .heroCtas{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
-    .cta{
-      flex:1;min-width:190px;
-      padding:14px 14px;border-radius:14px;
-      font-weight:1000;text-align:center;
-      border:1px solid rgba(15,23,42,.10);
-      color:#fff;
-      box-shadow:0 10px 25px rgba(0,0,0,.12);
-    }
-    .cta.red{background:linear-gradient(180deg,var(--r2),var(--r))}
-    .cta.green{background:linear-gradient(180deg,#2ea44f,#166534)}
-    .note{margin-top:10px;color:#64748b;font-weight:850;font-size:12px}
-
-    .heroRight{
-      padding:18px;
-      background:linear-gradient(180deg, rgba(22,101,52,.06), rgba(0,0,0,0));
-    }
-    .banner{
-      border-radius:18px;
-      border:1px solid rgba(15,23,42,.10);
-      overflow:hidden;
-      box-shadow: var(--shadow2);
-      background:#fff;
-      position:relative;
-    }
-    .banner:before{
-      content:"";
-      position:absolute;inset:-40px;
-      background: radial-gradient(closest-side, rgba(34,197,94,.18), transparent 65%);
-      pointer-events:none;
-    }
-    .banner img{width:100%;display:block;position:relative}
-
-    /* SECTIONS */
-    .section{margin-top:16px}
+    .pill:hover{transform:translateY(-1px);background:rgba(255,255,255,.09)}
+    .cta{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#071016;border-color:transparent}
+    .hero{padding:28px 0 10px}
+    .heroGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:stretch}
     .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:22px;
-      box-shadow: var(--shadow2);
-      overflow:hidden;
+      border:1px solid var(--line);border-radius:var(--radius);
+      background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04));
+      box-shadow:var(--shadow);overflow:hidden;
     }
     .pad{padding:18px}
-    h2{margin:0 0 8px;font-size:22px;letter-spacing:-.3px}
-    .p{margin:0;color:var(--mut);font-weight:750;line-height:1.55}
-
-    /* SERVICES (3 photo cards) */
-    .serviceGrid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:12px;
-      margin-top:14px;
+    .badge{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:8px 12px;border:1px solid rgba(34,197,94,.35);
+      border-radius:999px;background:rgba(34,197,94,.12);
+      color:#d7ffe6;font-weight:900;font-size:13px;
     }
-    @media(max-width:860px){.serviceGrid{grid-template-columns:1fr}}
-    .svc{
-      border-radius:18px;
-      overflow:hidden;
-      border:1px solid rgba(15,23,42,.10);
-      background:#fff;
-      box-shadow:0 10px 24px rgba(0,0,0,.08);
+    h1{margin:12px 0 8px;font-size:40px;line-height:1.05}
+    .sub{color:var(--muted);font-size:16px;line-height:1.55;margin:0 0 14px}
+    .btns{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 12px}
+    .btn{
+      cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 14px;border-radius:12px;border:1px solid var(--line);
+      background:rgba(255,255,255,.06);font-weight:900;text-decoration:none;
+      transition:.2s transform,.2s background;
     }
-    .svc img{width:100%;height:170px;object-fit:cover;display:block}
-    .svc .cap{padding:12px 14px;background:linear-gradient(180deg,#fff,#f3f4f6)}
-    .svc b{display:block;font-weight:1000}
-    .svc small{display:block;color:var(--mut);font-weight:850;margin-top:3px}
-
-    /* HOW IT WORKS */
-    .steps{
-      display:grid;grid-template-columns:repeat(3,1fr);
-      gap:12px;margin-top:14px;
+    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.09)}
+    .btn.cta{border-color:transparent;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#071016}
+    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+    .kpi{border:1px solid var(--line);border-radius:16px;padding:12px;background:rgba(255,255,255,.05)}
+    .kpi b{display:block;font-size:18px}
+    .kpi span{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+    form{display:grid;gap:10px}
+    input, textarea, select{
+      width:100%;padding:12px 12px;border-radius:12px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      color:var(--text);outline:none;
     }
-    @media(max-width:860px){.steps{grid-template-columns:1fr}}
-    .step{
-      border-radius:18px;
-      border:1px solid rgba(15,23,42,.10);
-      background:linear-gradient(180deg,#fff,#f8fafc);
-      padding:14px;
+    textarea{min-height:92px;resize:vertical}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .hint{color:var(--muted);font-size:12px}
+    .section{padding:18px 0}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .miniCard{
+      border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.05);
+      padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.18);
     }
-    .step b{display:block;font-weight:1000}
-    .step span{display:block;color:var(--mut);font-weight:850;margin-top:4px;font-size:13px}
-    .num{
-      width:34px;height:34px;border-radius:12px;
-      background:rgba(22,101,52,.12);
-      border:1px solid rgba(22,101,52,.18);
-      display:grid;place-items:center;
-      font-weight:1000;color:#14532d;
-      margin-bottom:10px;
+    .miniCard h3{margin:8px 0 6px;font-size:17px}
+    .miniCard p{margin:0;color:var(--muted);line-height:1.5;font-size:14px}
+    .icon{
+      width:42px;height:42px;border-radius:14px;display:grid;place-items:center;
+      background:rgba(34,197,94,.14);border:1px solid rgba(34,197,94,.35);font-size:18px;
     }
-
-    /* AREAS */
-    .areas{
-      display:flex;flex-wrap:wrap;gap:10px;margin-top:12px
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+    ul{margin:10px 0 0;padding-left:18px;color:var(--muted);line-height:1.6}
+    .banner{
+      border:1px dashed rgba(245,158,11,.55);
+      background:rgba(245,158,11,.08);
+      border-radius:18px;padding:14px;display:flex;gap:12px;align-items:flex-start;
     }
-    .chip{
-      padding:10px 12px;border-radius:999px;
-      border:1px solid rgba(15,23,42,.10);
-      background:#fff;
-      font-weight:900;color:#0b1220;
-      box-shadow:0 10px 24px rgba(0,0,0,.06);
-      font-size:13px;
+    .banner b{color:#ffe7b3}
+    .faq details{border:1px solid var(--line);border-radius:16px;padding:12px 14px;background:rgba(255,255,255,.04)}
+    .faq details + details{margin-top:10px}
+    summary{cursor:pointer;font-weight:900}
+    .footer{padding:18px 0 40px;color:var(--muted);border-top:1px solid var(--line);margin-top:18px}
+    .floating{position:fixed;right:14px;bottom:14px;z-index:50;display:grid;gap:10px}
+    .fab{
+      width:56px;height:56px;border-radius:18px;display:grid;place-items:center;
+      box-shadow:var(--shadow);text-decoration:none;font-weight:900;
+      border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);
     }
-
-    /* CONTACT (single column, calmer) */
-    .contactGrid{
-      display:grid;grid-template-columns:1fr 1fr;gap:14px;
-      align-items:start;margin-top:14px;
+    .fab.call{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#071016;border-color:transparent}
+    .fab.sms{background:rgba(59,130,246,.18)}
+    @media (max-width: 920px){
+      h1{font-size:34px}
+      .heroGrid,.grid3,.split,.kpis{grid-template-columns:1fr}
+      .nav{display:none}
     }
-    @media(max-width:980px){.contactGrid{grid-template-columns:1fr}}
-
-    .formHead{
-      background:linear-gradient(180deg,var(--g),var(--g2));
-      color:#fff;
-      padding:14px 16px;
-      font-weight:1000;
-      text-align:center;
-      font-size:16px;
-    }
-    label{display:block;font-weight:950;font-size:12px;margin-top:10px;color:#0b1220}
-    input,textarea{
-      width:100%;
-      padding:12px;
-      border-radius:12px;
-      border:1px solid rgba(15,23,42,.14);
-      background:#fff;
-      outline:none;
-      margin-top:6px;
-      font-weight:850;
-    }
-    textarea{min-height:120px;resize:vertical}
-    input:focus,textarea:focus{
-      border-color: rgba(22,101,52,.45);
-      box-shadow:0 0 0 4px rgba(22,101,52,.12);
-    }
-    .send{
-      margin-top:14px;
-      width:100%;
-      border:0;
-      border-radius:14px;
-      padding:14px;
-      font-weight:1000;
-      background:linear-gradient(180deg,var(--r2),var(--r));
-      color:#fff;
-      cursor:pointer;
-      box-shadow:0 12px 28px rgba(185,28,28,.22);
-    }
-
-    /* Footer CTA */
-    .footerBar{
-      margin-top:16px;
-      border-radius:22px;
-      background:linear-gradient(180deg,var(--g),var(--g2));
-      color:#fff;
-      border:1px solid rgba(255,255,255,.18);
-      box-shadow:var(--shadow);
-      padding:18px;
-      text-align:center;
-      font-weight:1000;
-    }
-    .footSmall{
-      margin:14px 0 88px;
-      text-align:center;
-      color:#64748b;
-      font-weight:850;
-      font-size:13px;
-    }
-
-    /* Sticky mobile CTA */
-    .sticky{
-      position:fixed;left:12px;right:12px;bottom:12px;
-      display:none;gap:10px;z-index:80;
-    }
-    .sticky a{
-      flex:1;
-      padding:14px 12px;
-      border-radius:16px;
-      font-weight:1000;
-      text-align:center;
-      color:#fff;
-      box-shadow:0 16px 35px rgba(0,0,0,.20);
-      border:1px solid rgba(255,255,255,.20);
-    }
-    .sticky .call{background:linear-gradient(180deg,var(--r2),var(--r))}
-    .sticky .quote{background:linear-gradient(180deg,#2ea44f,#166534)}
-    @media(max-width:860px){.sticky{display:flex}}
   </style>
 </head>
 
 <body>
-  <div class="nav">
-    <div class="wrap navin">
-      <div class="brand">
-        <div class="badge">♻️</div>
-        <div>
-          <strong>Ramassage Débarras Déchets</strong>
-          <small>Débarras pas cher • Junk Removal Montréal</small>
-        </div>
-      </div>
-
-      <div class="links">
-        <a href="#services">Nos Services</a>
-        <a href="#process">Comment ça marche</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-      <a class="phone" href="tel:15144464684">514 446-4684</a>
-    </div>
-  </div>
-
-  <div class="wrap">
-    <!-- HERO -->
-    <div class="hero">
-      <div class="heroGrid">
-        <div class="heroLeft">
-          <span class="pill">Débarras pas cher • Rapide • Fiable</span>
-          <h1>Junk Removal Montréal & Débarras pas cher</h1>
-          <p class="sub">
-            Ramassage Débarras Déchets — meubles, électros, débris.
-            Service rapide, propre et abordable à Montréal & alentours.
-          </p>
-
-          <div class="trustRow">
-            <div class="trust">✅ Même jour / lendemain</div>
-            <div class="trust">✅ Résidentiel & commercial</div>
-            <div class="trust">♻️ Recyclage quand possible</div>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="row">
+        <div class="brand">
+          <div class="logo">RD</div>
+          <div>
+            <div style="font-size:15px" data-i18n="brand_name">Ramassage débarras dechets</div>
+            <div class="small" data-i18n="brand_tag">Rapide • Prix honnête • On nettoie après</div>
           </div>
-
-          <div class="heroCtas">
-            <a class="cta red" href="tel:15144464684">📞 Appeler maintenant</a>
-            <a class="cta green" href="#contact">📝 Soumission gratuite</a>
-          </div>
-
-          <div class="note">Astuce: adresse + photos = prix plus précis.</div>
         </div>
 
-        <div class="heroRight">
-          <div class="banner">
-            <img src="file_0000000059ec71f59d678cb7c92e591d%20(1).png" alt="Ramassage Débarras Déchets" />
-          </div>
+        <nav class="nav">
+          <a class="pill" href="#services" data-i18n="nav_services">Services</a>
+          <a class="pill" href="#pricing" data-i18n="nav_pricing">Tarifs</a>
+          <a class="pill" href="#areas" data-i18n="nav_areas">Zones</a>
+          <a class="pill" href="#faq" data-i18n="nav_faq">FAQ</a>
+        </nav>
+
+        <div style="display:flex;gap:10px;align-items:center">
+          <!-- Language toggle -->
+          <button class="pill" id="langBtn" type="button" aria-label="Switch language">
+            🌐 <span id="langLabel">FR</span>
+          </button>
+
+          <a class="pill cta" href="tel:+15144464684">📞 514-446-4684</a>
         </div>
       </div>
     </div>
+  </header>
 
-    <!-- SERVICES -->
-    <div class="section card" id="services">
-      <div class="pad">
-        <h2>Nos services</h2>
-        <p class="p">
-          Débarras pas cher + junk removal Montréal (furniture removal, appliance removal, debris removal, cleanouts).
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="heroGrid">
+          <div class="card">
+            <div class="pad">
+              <div class="badge" data-i18n="hero_badge">✅ Ramassage le jour même • Soumission gratuite</div>
+
+              <h1 data-i18n="hero_h1">On vide. On charge. On débarrasse. (Et on laisse propre.)</h1>
+
+              <p class="sub" data-i18n="hero_sub">
+                Meubles, électros, débris de rénovation, encombrants, caves/garages, cours…
+                On arrive vite et on repart avec tout.
+              </p>
+
+              <div class="btns">
+                <a class="btn cta" href="tel:+15144464684" data-i18n="btn_call">📞 Appeler maintenant</a>
+                <a class="btn" href="sms:+15144464684?&body=Salut! J’ai besoin d’un ramassage. Adresse: _____. Items: _____. Photos: (ajouter en pièces jointes)" data-i18n="btn_text">💬 Texto + photos</a>
+                <a class="btn" href="#quote" data-i18n="btn_quote">⚡ Soumission en ligne</a>
+              </div>
+
+              <div class="kpis">
+                <div class="kpi"><b data-i18n="kpi1_t">Rapide</b><span data-i18n="kpi1_s">Jour même / lendemain</span></div>
+                <div class="kpi"><b data-i18n="kpi2_t">Honnête</b><span data-i18n="kpi2_s">Prix clair avant de charger</span></div>
+                <div class="kpi"><b data-i18n="kpi3_t">Propre</b><span data-i18n="kpi3_s">Petit balayage après</span></div>
+              </div>
+
+              <div style="margin-top:14px" class="banner">
+                <div style="font-size:20px">⭐</div>
+                <div>
+                  <b data-i18n="tip_b">Le plus simple :</b>
+                  <span data-i18n="tip_s">envoyez des photos par texto pour un prix exact.</span>
+                  <div class="small" data-i18n="tip_small">On peut coter beaucoup de jobs en quelques minutes.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="quote">
+            <div class="pad">
+              <h3 style="margin:6px 0 10px" data-i18n="form_title">Soumission gratuite (1 minute)</h3>
+
+              <!-- Replace YOUR_EMAIL_HERE with your email -->
+              <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+                <input type="hidden" name="_subject" value="Nouvelle demande - Ramassage débarras dechets" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="thank-you.html" />
+
+                <div class="two">
+                  <input name="nom" placeholder="Nom complet" required data-i18n-ph="ph_name" />
+                  <input name="telephone" placeholder="Téléphone" required data-i18n-ph="ph_phone" />
+                </div>
+
+                <input name="adresse" placeholder="Adresse / secteur (Montréal, Laval…)" required data-i18n-ph="ph_address" />
+
+                <div class="two">
+                  <select name="quand" required data-i18n-opt="when">
+                    <option value="" disabled selected>Quand voulez-vous le ramassage?</option>
+                    <option>Aujourd’hui</option>
+                    <option>Demain</option>
+                    <option>Cette semaine</option>
+                    <option>Flexible</option>
+                  </select>
+
+                  <select name="type" required data-i18n-opt="type">
+                    <option value="" disabled selected>Qu’est-ce qu’on enlève?</option>
+                    <option>Meubles</option>
+                    <option>Électroménagers</option>
+                    <option>Débris de rénovation</option>
+                    <option>Cave / garage</option>
+                    <option>Déchets / encombrants</option>
+                    <option>Autre</option>
+                  </select>
+                </div>
+
+                <textarea name="details" placeholder="Décrivez les items + quantité (ex: 1 sofa, 2 matelas, 6 boîtes). Si vous avez des photos, dites-le." data-i18n-ph="ph_details"></textarea>
+
+                <button class="btn cta" type="submit" data-i18n="form_btn">✅ Envoyer la demande</button>
+                <div class="hint" data-i18n="form_hint">Pas de spam. Réponse rapide. Pour urgent: appelez/texto.</div>
+              </form>
+
+              <div style="margin-top:12px" class="miniCard">
+                <div class="small" data-i18n="popular_title">On ramasse souvent</div>
+                <ul>
+                  <li data-i18n="popular_1">Sofas, matelas, lits, commodes</li>
+                  <li data-i18n="popular_2">Frigos, cuisinières, laveuse/sécheuse</li>
+                  <li data-i18n="popular_3">Bois, gypse, tuiles, déchets de chantier</li>
+                  <li data-i18n="popular_4">Débarras complet (cave/garage/entrepôt)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="wrap">
+        <h2 style="margin:0 0 10px" data-i18n="services_h2">Services</h2>
+        <p class="sub" style="margin:0 0 14px" data-i18n="services_sub">Petit ramassage ou gros débarras. Résidentiel & commercial.</p>
+
+        <div class="grid3">
+          <div class="miniCard">
+            <div class="icon">🛋️</div>
+            <h3 data-i18n="s1_h3">Meubles & encombrants</h3>
+            <p data-i18n="s1_p">Sofas, lits, matelas, tables, commodes, mobilier de bureau.</p>
+          </div>
+          <div class="miniCard">
+            <div class="icon">🧊</div>
+            <h3 data-i18n="s2_h3">Électroménagers</h3>
+            <p data-i18n="s2_p">Frigos, cuisinières, laveuse/sécheuse, lave-vaisselle.</p>
+          </div>
+          <div class="miniCard">
+            <div class="icon">🧱</div>
+            <h3 data-i18n="s3_h3">Débris de rénovation</h3>
+            <p data-i18n="s3_p">Gypse, bois, tuiles, armoires — ramassage rapide après travaux.</p>
+          </div>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <div class="split">
+          <div class="miniCard">
+            <div class="icon">🏠</div>
+            <h3 data-i18n="s4_h3">Débarras cave / garage</h3>
+            <p data-i18n="s4_p">On trie, charge, transporte et on balaie — vous récupérez votre espace.</p>
+            <ul>
+              <li data-i18n="s4_l1">Débarras après déménagement</li>
+              <li data-i18n="s4_l2">Entrepôt / locker</li>
+              <li data-i18n="s4_l3">Logements / propriétaires</li>
+            </ul>
+          </div>
+
+          <div class="miniCard">
+            <div class="icon">🌿</div>
+            <h3 data-i18n="s5_h3">Extérieur & cour</h3>
+            <p data-i18n="s5_p">Branches, déchets verts, vieux mobilier extérieur, shed, etc.</p>
+            <ul>
+              <li data-i18n="s5_l1">Nettoyage saisonnier</li>
+              <li data-i18n="s5_l2">Ramassage au bord de rue</li>
+              <li data-i18n="s5_l3">One-shot ou régulier</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="wrap">
+        <h2 style="margin:0 0 10px" data-i18n="pricing_h2">Tarifs simples</h2>
+        <p class="sub" style="margin:0 0 14px" data-i18n="pricing_sub">
+          La plupart des jobs = volume + type d’items. Envoyez des photos pour un prix exact.
         </p>
 
-        <div class="serviceGrid">
-          <div class="svc">
-            <img src="meubles.png" alt="Meubles - Furniture removal Montréal">
-            <div class="cap">
-              <b>Meubles</b>
-              <small>Furniture removal • Canapés, matelas, armoires</small>
-            </div>
+        <div class="grid3">
+          <div class="miniCard">
+            <div class="icon">💡</div>
+            <h3 data-i18n="p1_h3">Minimum</h3>
+            <p data-i18n="p1_p">Parfait pour 1–3 items (ex: matelas + petite commode).</p>
           </div>
-
-          <div class="svc">
-            <img src="electros.png" alt="Électros - Appliance removal Montréal">
-            <div class="cap">
-              <b>Électros</b>
-              <small>Appliance removal • Frigos, laveuses, sécheuses</small>
-            </div>
+          <div class="miniCard">
+            <div class="icon">🚚</div>
+            <h3 data-i18n="p2_h3">Demi-charge</h3>
+            <p data-i18n="p2_p">Coin de cave, petit tas de débris, nettoyage moyen.</p>
           </div>
-
-          <div class="svc">
-            <img src="debris.png" alt="Débris - Debris removal Montréal">
-            <div class="cap">
-              <b>Construction / Débris</b>
-              <small>Debris removal • Rénovation, bois, gypse</small>
-            </div>
+          <div class="miniCard">
+            <div class="icon">🏁</div>
+            <h3 data-i18n="p3_h3">Charge complète / débarras</h3>
+            <p data-i18n="p3_p">Gros volume: pièces complètes, garage, commercial.</p>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- HOW IT WORKS -->
-    <div class="section card" id="process">
-      <div class="pad">
-        <h2>Comment ça marche</h2>
-        <p class="p">Simple, rapide, propre.</p>
-
-        <div class="steps">
-          <div class="step">
-            <div class="num">1</div>
-            <b>Soumission</b>
-            <span>Adresse + items + photos (si possible).</span>
-          </div>
-          <div class="step">
-            <div class="num">2</div>
-            <b>Prix clair</b>
-            <span>On confirme le prix selon volume & accès.</span>
-          </div>
-          <div class="step">
-            <div class="num">3</div>
-            <b>Ramassage</b>
-            <span>On charge tout et on laisse propre.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- AREAS -->
-    <div class="section card">
-      <div class="pad">
-        <h2>Zones desservies</h2>
-        <p class="p">Montréal et environs.</p>
-
-        <div class="areas">
-          <div class="chip">Montréal</div>
-          <div class="chip">Laval</div>
-          <div class="chip">Rive-Sud</div>
-          <div class="chip">Rive-Nord</div>
-          <div class="chip">West Island</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="section card" id="contact">
-      <div class="formHead">Demande de soumission gratuite</div>
-      <div class="pad">
-        <div class="contactGrid">
+        <div style="margin-top:12px" class="banner">
+          <div style="font-size:20px">⚡</div>
           <div>
-            <h2 style="margin:0 0 8px">Besoin d’un prix rapide?</h2>
-            <p class="p">
-              Indiquez l’adresse, la liste des items, l’étage et l’accès (escaliers/ascenseur).
-              <br><br>
-              <b>SEO:</b> Junk removal Montréal • Débarras pas cher • Furniture removal • Debris removal
-            </p>
-            <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-              <a class="cta red" style="max-width:none" href="tel:15144464684">📞 514 446-4684</a>
-              <a class="cta green" style="max-width:none" href="#contact">📝 Remplir le formulaire</a>
-            </div>
-          </div>
-
-          <div>
-            <form name="soumission" method="POST" data-netlify="true">
-              <input type="hidden" name="form-name" value="soumission" />
-
-              <label>Nom</label>
-              <input name="name" required>
-
-              <label>Adresse / secteur</label>
-              <input name="address" required>
-
-              <label>Téléphone</label>
-              <input name="phone" required>
-
-              <label>Détails</label>
-              <textarea name="message" placeholder="Décrivez les items + étage + accès..." required></textarea>
-
-              <button class="send" type="submit">ENVOYER</button>
-              <div class="note">En envoyant, vous acceptez d’être contacté pour votre soumission.</div>
-            </form>
+            <b data-i18n="pricing_tip_b">Soumission rapide :</b>
+            <span data-i18n="pricing_tip_s">texto + photos + adresse + moment souhaité.</span>
+            <div class="small" data-i18n="pricing_tip_small">On confirme le prix avant de charger.</div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- FOOTER CTA -->
-    <div class="footerBar">
-      ENLÈVEMENT RAPIDE ET PAS CHER — Junk Removal Montréal
-      <br>
-      <a class="phone" href="tel:15144464684">📞 514 446-4684</a>
-    </div>
+    <section class="section" id="areas">
+      <div class="wrap">
+        <h2 style="margin:0 0 10px" data-i18n="areas_h2">Zones desservies</h2>
+        <p class="sub" style="margin:0 0 14px" data-i18n="areas_sub">Montréal + alentours.</p>
 
-    <div class="footSmall">
-      © <span id="y"></span> Ramassage Débarras Déchets — Débarras pas cher & Junk Removal Montréal
-    </div>
+        <div class="miniCard">
+          <p style="margin:0;color:var(--muted);line-height:1.7" data-i18n="areas_list">
+            Montréal • Laval • Longueuil • Rive-Sud • Rive-Nord • West Island •
+            Ahuntsic • Villeray • Plateau • Rosemont • Saint-Laurent • NDG • Verdun
+          </p>
+          <div class="small" style="margin-top:10px" data-i18n="areas_note">Vous êtes pas sûr? Appelez/texto — si c’est proche, on vient.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <h2 style="margin:0 0 10px" data-i18n="faq_h2">FAQ</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq1_q">Vous faites le ramassage le jour même?</summary>
+            <div class="small" style="margin-top:8px" data-i18n="faq1_a">Oui selon disponibilité. Envoyez des photos par texto pour aller plus vite.</div>
+          </details>
+          <details>
+            <summary data-i18n="faq2_q">Comment vous calculez le prix?</summary>
+            <div class="small" style="margin-top:8px" data-i18n="faq2_a">Souvent au volume + type d’items. On confirme le prix avant de charger.</div>
+          </details>
+          <details>
+            <summary data-i18n="faq3_q">Vous nettoyez après?</summary>
+            <div class="small" style="margin-top:8px" data-i18n="faq3_a">Oui, petit balayage rapide pour laisser propre.</div>
+          </details>
+          <details>
+            <summary data-i18n="faq4_q">Qu’est-ce que vous ne pouvez pas ramasser?</summary>
+            <div class="small" style="margin-top:8px" data-i18n="faq4_a">Certaines matières dangereuses peuvent être refusées. Dites-nous ce que c’est et on confirme.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="card">
+          <div class="pad">
+            <h2 style="margin:0 0 6px" data-i18n="final_h2">Prêt à débarrasser?</h2>
+            <p class="sub" style="margin:0 0 14px" data-i18n="final_sub">Appelez ou textez maintenant — soumission rapide + horaire de ramassage.</p>
+            <div class="btns">
+              <a class="btn cta" href="tel:+15144464684" data-i18n="final_call">📞 514-446-4684</a>
+              <a class="btn" href="sms:+15144464684?&body=Salut! J’ai besoin d’un ramassage. Adresse: _____. Items: _____. Photos: (ajouter en pièces jointes)" data-i18n="final_text">💬 Texto + photos</a>
+              <a class="btn" href="#quote" data-i18n="final_quote">⚡ Soumission en ligne</a>
+            </div>
+            <div class="small">© <span id="year"></span> <span data-i18n="brand_name">Ramassage débarras dechets</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap small">
+        <span data-i18n="footer_line">Heures: Lun–Dim 8h–20h • Téléphone: 514-446-4684 • Montréal, QC</span>
+      </div>
+    </footer>
+  </main>
+
+  <div class="floating">
+    <a class="fab call" href="tel:+15144464684" aria-label="Appeler">📞</a>
+    <a class="fab sms" href="sms:+15144464684?&body=Salut! J’ai besoin d’un ramassage. Adresse: _____. Items: _____. Photos: (ajouter en pièces jointes)" aria-label="Texto">💬</a>
   </div>
 
-  <div class="sticky">
-    <a class="call" href="tel:15144464684">📞 Appeler</a>
-    <a class="quote" href="#contact">📝 Soumission</a>
-  </div>
+  <script>
+    // ---------- i18n ----------
+    const DICT = {
+      fr: {
+        brand_name: "Ramassage débarras dechets",
+        brand_tag: "Rapide • Prix honnête • On nettoie après",
+        nav_services: "Services",
+        nav_pricing: "Tarifs",
+        nav_areas: "Zones",
+        nav_faq: "FAQ",
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+        hero_badge: "✅ Ramassage le jour même • Soumission gratuite",
+        hero_h1: "On vide. On charge. On débarrasse. (Et on laisse propre.)",
+        hero_sub: "Meubles, électros, débris de rénovation, encombrants, caves/garages, cours… On arrive vite et on repart avec tout.",
+        btn_call: "📞 Appeler maintenant",
+        btn_text: "💬 Texto + photos",
+        btn_quote: "⚡ Soumission en ligne",
+
+        kpi1_t: "Rapide", kpi1_s: "Jour même / lendemain",
+        kpi2_t: "Honnête", kpi2_s: "Prix clair avant de charger",
+        kpi3_t: "Propre", kpi3_s: "Petit balayage après",
+
+        tip_b: "Le plus simple :", tip_s: "envoyez des photos par texto pour un prix exact.", tip_small: "On peut coter beaucoup de jobs en quelques minutes.",
+
+        form_title: "Soumission gratuite (1 minute)",
+        ph_name: "Nom complet",
+        ph_phone: "Téléphone",
+        ph_address: "Adresse / secteur (Montréal, Laval…)",
+        ph_details: "Décrivez les items + quantité (ex: 1 sofa, 2 matelas, 6 boîtes). Si vous avez des photos, dites-le.",
+        form_btn: "✅ Envoyer la demande",
+        form_hint: "Pas de spam. Réponse rapide. Pour urgent: appelez/texto.",
+
+        popular_title: "On ramasse souvent",
+        popular_1: "Sofas, matelas, lits, commodes",
+        popular_2: "Frigos, cuisinières, laveuse/sécheuse",
+        popular_3: "Bois, gypse, tuiles, déchets de chantier",
+        popular_4: "Débarras complet (cave/garage/entrepôt)",
+
+        services_h2: "Services",
+        services_sub: "Petit ramassage ou gros débarras. Résidentiel & commercial.",
+        s1_h3: "Meubles & encombrants", s1_p: "Sofas, lits, matelas, tables, commodes, mobilier de bureau.",
+        s2_h3: "Électroménagers", s2_p: "Frigos, cuisinières, laveuse/sécheuse, lave-vaisselle.",
+        s3_h3: "Débris de rénovation", s3_p: "Gypse, bois, tuiles, armoires — ramassage rapide après travaux.",
+        s4_h3: "Débarras cave / garage", s4_p: "On trie, charge, transporte et on balaie — vous récupérez votre espace.",
+        s4_l1: "Débarras après déménagement", s4_l2: "Entrepôt / locker", s4_l3: "Logements / propriétaires",
+        s5_h3: "Extérieur & cour", s5_p: "Branches, déchets verts, vieux mobilier extérieur, shed, etc.",
+        s5_l1: "Nettoyage saisonnier", s5_l2: "Ramassage au bord de rue", s5_l3: "One-shot ou régulier",
+
+        pricing_h2: "Tarifs simples",
+        pricing_sub: "La plupart des jobs = volume + type d’items. Envoyez des photos pour un prix exact.",
+        p1_h3: "Minimum", p1_p: "Parfait pour 1–3 items (ex: matelas + petite commode).",
+        p2_h3: "Demi-charge", p2_p: "Coin de cave, petit tas de débris, nettoyage moyen.",
+        p3_h3: "Charge complète / débarras", p3_p: "Gros volume: pièces complètes, garage, commercial.",
+        pricing_tip_b: "Soumission rapide :", pricing_tip_s: "texto + photos + adresse + moment souhaité.", pricing_tip_small: "On confirme le prix avant de charger.",
+
+        areas_h2: "Zones desservies",
+        areas_sub: "Montréal + alentours.",
+        areas_list: "Montréal • Laval • Longueuil • Rive-Sud • Rive-Nord • West Island • Ahuntsic • Villeray • Plateau • Rosemont • Saint-Laurent • NDG • Verdun",
+        areas_note: "Vous êtes pas sûr? Appelez/texto — si c’est proche, on vient.",
+
+        faq_h2: "FAQ",
+        faq1_q: "Vous faites le ramassage le jour même?", faq1_a: "Oui selon disponibilité. Envoyez des photos par texto pour aller plus vite.",
+        faq2_q: "Comment vous calculez le prix?", faq2_a: "Souvent au volume + type d’items. On confirme le prix avant de charger.",
+        faq3_q: "Vous nettoyez après?", faq3_a: "Oui, petit balayage rapide pour laisser propre.",
+        faq4_q: "Qu’est-ce que vous ne pouvez pas ramasser?", faq4_a: "Certaines matières dangereuses peuvent être refusées. Dites-nous ce que c’est et on confirme.",
+
+        final_h2: "Prêt à débarrasser?",
+        final_sub: "Appelez ou textez maintenant — soumission rapide + horaire de ramassage.",
+        final_call: "📞 514-446-4684",
+        final_text: "💬 Texto + photos",
+        final_quote: "⚡ Soumission en ligne",
+
+        footer_line: "Heures: Lun–Dim 8h–20h • Téléphone: 514-446-4684 • Montréal, QC"
+      },
+
+      en: {
+        brand_name: "Ramassage débarras dechets",
+        brand_tag: "Fast • Fair pricing • We clean up after",
+
+        nav_services: "Services",
+        nav_pricing: "Pricing",
+        nav_areas: "Service Areas",
+        nav_faq: "FAQ",
+
+        hero_badge: "✅ Same-day pickup • Free quote",
+        hero_h1: "We clear it out. We load it up. We haul it away. (Clean finish.)",
+        hero_sub: "Furniture, appliances, renovation debris, bulky items, basements/garages, yards… We show up fast and take it all.",
+        btn_call: "📞 Call now",
+        btn_text: "💬 Text + photos",
+        btn_quote: "⚡ Get online quote",
+
+        kpi1_t: "Fast", kpi1_s: "Same-day / next-day",
+        kpi2_t: "Fair", kpi2_s: "Clear price before we load",
+        kpi3_t: "Clean", kpi3_s: "Quick sweep after pickup",
+
+        tip_b: "Easiest way:", tip_s: "text photos for an exact quote.", tip_small: "Most quotes can be done in minutes.",
+
+        form_title: "Free quote (1 minute)",
+        ph_name: "Full name",
+        ph_phone: "Phone number",
+        ph_address: "Pickup address / area (Montreal, Laval…)",
+        ph_details: "Describe items + quantity (ex: 1 sofa, 2 mattresses, 6 boxes). If you have photos, mention it.",
+        form_btn: "✅ Request quote",
+        form_hint: "No spam. Fast reply. For urgent: call/text.",
+
+        popular_title: "Common pickups",
+        popular_1: "Sofas, mattresses, beds, dressers",
+        popular_2: "Fridges, stoves, washers/dryers",
+        popular_3: "Wood, drywall, tiles, construction junk",
+        popular_4: "Full cleanouts (basement/garage/storage)",
+
+        services_h2: "Services",
+        services_sub: "Small pickups to full cleanouts. Residential & commercial.",
+        s1_h3: "Furniture & bulky items", s1_p: "Sofas, beds, mattresses, tables, dressers, office furniture.",
+        s2_h3: "Appliances", s2_p: "Fridges, stoves, washers/dryers, dishwashers.",
+        s3_h3: "Renovation debris", s3_p: "Drywall, wood, tiles, cabinets — quick cleanup after jobs.",
+        s4_h3: "Basement / garage cleanouts", s4_p: "We sort, load, haul, and do a quick sweep so you get your space back.",
+        s4_l1: "Move-out / estate cleanouts", s4_l2: "Storage locker emptying", s4_l3: "Landlord turnovers",
+        s5_h3: "Yard & exterior pickup", s5_p: "Branches, yard waste, outdoor furniture, shed junk, and more.",
+        s5_l1: "Seasonal cleanups", s5_l2: "Curbside bulk pickup", s5_l3: "One-time or recurring",
+
+        pricing_h2: "Simple pricing",
+        pricing_sub: "Most jobs are priced by volume + item type. Text photos for an exact quote.",
+        p1_h3: "Minimum pickup", p1_p: "Perfect for 1–3 items (ex: mattress + small dresser).",
+        p2_h3: "Half load", p2_p: "Mid-size cleanup: basement corner, small reno pile, etc.",
+        p3_h3: "Full load / cleanout", p3_p: "Big removals: full rooms, garage, commercial.",
+        pricing_tip_b: "Fast quote:", pricing_tip_s: "text + photos + address + preferred time.", pricing_tip_small: "We confirm price before loading.",
+
+        areas_h2: "Service areas",
+        areas_sub: "Montreal + surrounding areas.",
+        areas_list: "Montreal • Laval • Longueuil • South Shore • North Shore • West Island • Ahuntsic • Villeray • Plateau • Rosemont • Saint-Laurent • NDG • Verdun",
+        areas_note: "Not sure? Call/text—if you’re nearby, we’ll come.",
+
+        faq_h2: "FAQ",
+        faq1_q: "Do you offer same-day pickup?", faq1_a: "Yes—depending on availability. Text photos for the fastest scheduling.",
+        faq2_q: "How do you price jobs?", faq2_a: "Usually by volume + item type. We confirm the price before loading.",
+        faq3_q: "Do you clean after removal?", faq3_a: "Yes—we do a quick sweep so the area looks clean.",
+        faq4_q: "What can’t you remove?", faq4_a: "Some hazardous items may require special handling. Tell us what you have and we’ll confirm.",
+
+        final_h2: "Ready to clear it out?",
+        final_sub: "Call or text now — quick quote + pickup time.",
+        final_call: "📞 514-446-4684",
+        final_text: "💬 Text + photos",
+        final_quote: "⚡ Online quote",
+
+        footer_line: "Hours: Mon–Sun 8am–8pm • Phone: 514-446-4684 • Montreal, QC"
+      }
+    };
+
+    // Set French as default
+    let lang = localStorage.getItem("lang") || "fr";
+
+    function applyLang(l){
+      lang = l;
+      localStorage.setItem("lang", lang);
+
+      // simple text nodes
+      document.querySelectorAll("[data-i18n]").forEach(el=>{
+        const k = el.getAttribute("data-i18n");
+        if(DICT[lang][k] !== undefined) el.textContent = DICT[lang][k];
+      });
+
+      // placeholders
+      document.querySelectorAll("[data-i18n-ph]").forEach(el=>{
+        const k = el.getAttribute("data-i18n-ph");
+        if(DICT[lang][k] !== undefined) el.setAttribute("placeholder", DICT[lang][k]);
+      });
+
+      // SMS body language
+      const smsBodyFR = "Salut! J’ai besoin d’un ramassage. Adresse: _____. Items: _____. Photos: (ajouter en pièces jointes)";
+      const smsBodyEN = "Hi! I need a pickup. Address: _____. Items: _____. Photos: (attach)";
+      document.querySelectorAll('a[href^="sms:"]').forEach(a=>{
+        const base = "sms:+15144464684?&body=";
+        a.setAttribute("href", base + encodeURIComponent(lang === "fr" ? smsBodyFR : smsBodyEN));
+      });
+
+      // toggle label
+      document.getElementById("langLabel").textContent = (lang === "fr" ? "FR" : "EN");
+      document.documentElement.lang = lang;
+    }
+
+    document.getElementById("langBtn").addEventListener("click", ()=>{
+      applyLang(lang === "fr" ? "en" : "fr");
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    applyLang(lang);
+  </script>
 </body>
 </html>
